@@ -1,14 +1,15 @@
 package jp.ac.uryukyu.ie.e195711;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class Field {
     //フィールドのサイズ(単位:ブロック)
-    int HEIGHT = 26;
-    int WIDTH = 12;
+    static int HEIGHT = 26;
+    static int WIDTH = 12;
 
     //ブロックのサイズ
-    int BLOCK_SIZE = 15;
+    static int BLOCK_SIZE = 15;
 
     //フィールドをint[][]で表現
     int[][] field;
@@ -39,14 +40,14 @@ public class Field {
     void draw(Graphics g) {
         //エリア内を黒く塗りつぶす
         g.setColor(Color.BLACK);
-        g.fillRect(0, 0, WIDTH*BLOCK_SIZE, HEIGHT*BLOCK_SIZE);
+        g.fillRect(0, 0, Panel.WIDTH * BLOCK_SIZE, Panel.HEIGHT * BLOCK_SIZE);
 
         //壁を灰色に塗りつぶす
         g.setColor(Color.LIGHT_GRAY);
         for (int y = 0; y < HEIGHT; y++) {
             for (int x = 0; x < WIDTH; x++) {
                 if (field[y][x] == 1) {
-                    g.fillRect(x*BLOCK_SIZE, y*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE);
+                    g.fillRect(x * BLOCK_SIZE, y * BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE);
                 }
             }
         }

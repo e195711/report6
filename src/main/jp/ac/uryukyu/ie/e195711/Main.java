@@ -1,12 +1,12 @@
 package jp.ac.uryukyu.ie.e195711;
 
 import javax.swing.JFrame;
-import java.awt.*;
+import java.awt.Container;
 
 class Main extends JFrame {
     Main() {
         //タイトルの設定
-        setTitle("フィールド表示");
+        setTitle("ミノの表示•移動•回転");
         //サイズ変更不可
         setResizable(false);
         //閉じるボタンをクリックしたときの処理を設定
