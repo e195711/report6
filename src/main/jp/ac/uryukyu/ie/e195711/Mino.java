@@ -45,7 +45,7 @@ class Mino {
     }
 
     void draw(Graphics g) {
-        g.setColor(Color.YELLOW);
+        g.setColor(Color.CYAN);
         for (int i = 0; i < HEIGHT; i++) {
             for (int j = 0; j < WIDTH; j++) {
                 if (mino[i][j] == 1) {
