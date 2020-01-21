@@ -12,6 +12,7 @@
 # クラスの詳細決め  
 1. フィールドの表示までの機能
 2. ミノの実装(ひとまずIミノのみ)
+3. 自動落下の実装
 ## Fieldクラス  
 ### フィールド変数  
 - int[][] field  
@@ -47,6 +48,9 @@
 - paintComponent(Graphics g)  
     - 描画するためにはOverrideしないといけない  
     - FieldとMinoの描画処理を呼び出す  
+- run()  
+    - 並列処理のためにOverrideしないといけない  
+    - 一定秒ごとに下に落ちることで自由落下を実装する
 - keyTyped()
 - keyReleased()
 - keyPressed()
